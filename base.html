@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript">
+            mk = {
+                view: {},
+                start: new Date(2014,8,28),
+                stop: new Date(2014,9,10)
+            };
+
+            utils = {
+                time: {}
+            };
+
+            utils.time.endOf = function(date) {
+                date = new Date(date);
+                date.setHours(23);
+                date.setMinutes(59);
+                date.setSeconds(59);
+                date.setMilliseconds(999);
+
+                return date;
+            };
+
+            utils.time.startOf = function(date) {
+                date = new Date(date);
+                date.setHours(0);
+                date.setMinutes(0);
+                date.setSeconds(0);
+                date.setMilliseconds(0);
+
+                return date;
+            };
+        </script>
+        <script type="text/javascript" src="deferred.js"></script>
+        <script type="text/javascript" src="underscore-min.js"></script>
+        <script type="text/javascript" src="backbone.js"></script>
+        <script type="text/javascript" src="backbone.nativeview.js"></script>
+        <script type="text/javascript" src="backbone.nativeajax.js"></script>
+        <script type="text/javascript" src="datepicker.js"></script>
+        <script type="text/javascript" src="daterangepicker.js"></script>
+    </head>
+    <body>
+        <div class="test">
+            <div class="btn">cal</div>
+            <div class="date-range-picker">
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var el = document.querySelector(".test");
+
+            var v = new mk.view.DateRangePicker({
+                el: el
+            });
+
+            v.render();
+        </script>
+    </body>
+</html>

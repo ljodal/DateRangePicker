@@ -1,0 +1,80 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    background:rgba(229,230,234,1);
+    font-family:Helvetica;
+}
+
+.btn {
+    position:relative;
+    background:rgba(37,39,46,1);
+    width:auto;
+    display:inline-block;
+    color:white;
+    font-size:10px;
+    padding:12px;
+    cursor:pointer;
+}
+
+.date-range-picker {
+    position:fixed;
+    background:rgba(60,63,73,1);
+    width:450px;
+
+    visibility:hidden;
+    opacity:0;
+
+    &.show {
+        visibility:visible;
+        opacity:1;
+    }
+
+    > table.datepicker {
+        table-layout:fixed;
+        float:left;
+        width:calc(50% - 5px);
+        font-size:14px;
+        padding:10px;
+        border-collapse:collapse;
+        color:white;
+        background:rgba(37,39,46,1);
+
+        &:first-of-type {
+            margin-right:10px;
+        }
+
+        > thead > tr.month > th {
+            padding:5px 0px;
+        }
+
+        > thead > tr.days > th {
+            font-size:9px;
+            text-transform:uppercase;
+            background:lighten(rgba(60,63,73,1), 15%);
+            padding:3px 0px;
+        }
+
+
+        > tbody > tr {
+            > td {
+                text-align:center;
+                padding:6px 0px;
+                cursor:pointer;
+
+                &.highlight {
+                    color:rgba(248,152,29,1);
+                }
+
+                &.other {
+                    color:gray;
+                }
+
+                &.other.highlight {
+                    color:darken(rgba(248,152,29,1), 25%);
+                }
+            }
+        }
+    }
+}
