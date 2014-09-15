@@ -46,14 +46,18 @@ body {
         }
 
         > thead > tr.month > th {
-            padding:5px 0px;
+            padding:8px 0px;
+
+            &.next, &.prev {
+                cursor:pointer;
+            }
         }
 
         > thead > tr.days > th {
             font-size:9px;
             text-transform:uppercase;
             background:lighten(rgba(60,63,73,1), 15%);
-            padding:3px 0px;
+            padding:5px 0px;
         }
 
 

@@ -25,10 +25,10 @@
     };
 
     // Month names
-    var months = ["januar","februar", "mars", "april", "mai", "juni",
-        "juli", "august", "september", "oktober", "november", "desember"];
+    var months = ["january","february", "march", "april", "may", "june",
+        "july", "august", "september", "october", "november", "december"];
 
-    var days = ["man", "tir", "ons", "tor", "fre", "lør", "søn"];
+    var days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
     mk.view.DatePicker = Backbone.NativeView.extend({
         tagName: "table",
