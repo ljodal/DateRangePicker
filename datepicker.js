@@ -98,6 +98,8 @@
         },
 
         renderMonth: function() {
+            var i;
+
             // Remove all existing elements from the body
             var last = this.body.lastChild;
             for (;last;last = this.body.lastChild) {
@@ -121,10 +123,11 @@
             var start = lastMonday(d0);
             var stop = nextSunday(d1);
 
-            while (start <= stop) {
+            //while (start <= stop) {
+            for (i = 0; i < 6; i++) {
                 // Create a new row for each week and append to view
                 var row = document.createElement("tr");
-                for (var i = 0; i < 7; i++) {
+                for (var j = 0; j < 7; j++) {
                     var td = document.createElement("td");
 
                     // Configure element
